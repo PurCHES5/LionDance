@@ -464,15 +464,15 @@ p {
 }
 
 .tm-fixed-header-1 {
-    background-image: url(../img/video-detail-1.jpg);
+    background-image: url(../img/lionHeader.JPG);
 }
 
 .tm-fixed-header-2 {
-    background-image: url(../img/about-1.jpg);
+    background-image: url(../img/lionHeader.JPG);
 }
 
 .tm-fixed-header-3 {
-    background-image: url(../img/contact-1.jpg);
+    background-image: url(../img/loading.jpg);
 }
 
 video {
