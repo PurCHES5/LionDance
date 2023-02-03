@@ -553,7 +553,7 @@ video {
 	 position: relative;
 }
  .gallery__image {
-	 display: block;
+	 display: block !important;
 	 width: 100%;
 	 transition: 0.3s;
 }
