@@ -724,7 +724,7 @@ video {
 }
 
 .gallery:hover .gallery__image {
-    filter: opacity(50%);
+    filter: opacity(70%);
 }
 
 .gallery__column {

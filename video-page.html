@@ -61,41 +61,29 @@ https://templatemo.com/tm-552-video-catalog
 		<div class="container-fluid">
 			<div class="mx-auto tm-content-container">
 				<main>
-					<div class="row mb-5 pb-4">
-						<div class="col-12">
-							<!-- Video player 1422x800 -->
-							<video width="1422" height="800" controls autoplay>
-							  <source src="video/wheat-field.mp4" type="video/mp4">							  
-							Your browser does not support the video tag.
-							</video>
-						</div>
+					<div style="width: 80%; height: 800px; float: none; clear: both; margin: 2px auto;">
+						<embed src="https://www.youtube.com/embed/DSYppI1x2c4?autohide=1&autoplay=1" wmode="transparent"
+							type="video/mp4" width="100%" height="100%" allow="autoplay; encrypted-media; picture-in-picture"
+							allowfullscreen title="Keyboard Cat">
+					</div>
 				</main>
-
-                <footer class="row pt-5">
-                    <div class="col-12">
-                        <p class="text-right"> 
-                        Designed by <a href="https://templatemo.com" rel="nofollow" target="_parent">TemplateMo</a></p>
-                    </div>
-                </footer>
+		
+				<footer class="row pt-5">
+					<div class="col-12">
+						<p class="text-right">
+							Designed by <a href="https://templatemo.com" rel="nofollow" target="_parent">TemplateMo</a></p>
+					</div>
+				</footer>
 			</div> <!-- .tm-content-container -->
 		</div>
-	</div>
+		</div>
 
 	<script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-    	$(document).ready(function() {
-    		$('.tm-likes-box').click(function(e) {
-    			e.preventDefault();
-    			$(this).toggleClass('tm-liked');
-
-    			if($(this).hasClass('tm-liked')) {
-    				$('#tm-likes-count').html('486 likes');
-    			} else {
-    				$('#tm-likes-count').html('485 likes');
-    			}
-    		});
-    	});
+        $(document).ready(function () {
+$(this).scrollTop(450);
+        });
     </script>
 </body>
 </html>
