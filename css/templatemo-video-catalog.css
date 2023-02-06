@@ -723,10 +723,6 @@ video {
     transition: 0.3s;
 }
 
-.gallery:hover .gallery__image {
-    filter: opacity(70%);
-}
-
 .gallery__column {
     display: flex !important;
     flex-direction: column;
@@ -736,10 +732,6 @@ video {
 .gallery__link {
     margin: 2px;
     overflow: hidden;
-}
-
-.gallery__link:hover .gallery__image {
-    filter: opacity(100%);
 }
 
 .gallery__link:hover .gallery__caption {
