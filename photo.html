@@ -67,131 +67,23 @@ https://templatemo.com/tm-552-video-catalog
                         rel="stylesheet">
 
                     <div class="gallery">
-                        <div class="gallery__column">
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo1">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc1">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo2">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc2">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo3">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc3">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo13">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc13">
-                                </figure>
-                            </a>
+                        <div class="gallery__column" id="gallery__column_1">
                         </div>
 
-                        <div class="gallery__column">
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo4">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc4">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo5">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc5">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo6">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc6">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo14">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc14">
-                                </figure>
-                            </a>
+                        <div class="gallery__column" id="gallery__column_2">
                         </div>
 
-                        <div class="gallery__column">
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo7">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc7">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo8">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc8">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo9">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc9">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo15">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc15">
-                                </figure>
-                            </a>
+                        <div class="gallery__column" id="gallery__column_3">
                         </div>
 
-                        <div class="gallery__column">
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo10">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc10">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo11">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc11">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo12">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc12">
-                                </figure>
-                            </a>
-
-                            <a href="img/loading.jpg" target="_blank" class="gallery__link" id="photo16">
-                                <figure class="gallery__thumb">
-                                    <img src="img/loading.jpg"
-                                        alt="photo" class="gallery__image" id="photosrc16">
-                                </figure>
-                            </a>
+                        <div class="gallery__column" id="gallery__column_4">
                         </div>
                     </div>
                 </div>
 			</div>
 		</main>
         
-        <button class="button-63" role="button" onclick="window.location.reload();">Load More!</button>
+        <button class="button-63" role="button" onclick="loadPhoto()">Load More!</button>
 
 		<div class="container-fluid tm-content-container mx-auto pt-5">
             <footer class="row pt-5">
@@ -210,8 +102,6 @@ https://templatemo.com/tm-552-video-catalog
 $(this).scrollTop(450);
         });
 
-        window.onload = function selectPhoto()
-        {
             var photos = 
             [
                 "https://lh3.googleusercontent.com/pw/AMWts8C29SH5LvMw-kPAQFKdobwiEusWiHA3unAzsjRAQfg7UH09wMNj-CJyGVHCvw9imWxNP-Kc1hMjt6g7xTByKGNZBeilofqoVuMloQnyojE5tT90yII89G96G7bPXaSNfNk-tC5mi0kcEOBxs9mrXnw=w1605-h903-no?authuser=0",
@@ -275,15 +165,49 @@ $(this).scrollTop(450);
                 "https://lh3.googleusercontent.com/pw/AMWts8AUxqiUSDbZqqPFI6MUWPtPxXVaeWISRKNSufNLuguvGDzMKKrv066d6jIF9KH8pUu8vnbXW7idmuQcyaKQObkVibEs1Tkdrxdv3TlnUbPQ3qWuX9xAhke-L0Bmk3xjjwOkKrNQuxUPAezlrhDSJi4=w1477-h830-no?authuser=0",
             ];
 
-            for (let i = 0; i < 16; i++)
+        var a = 0;
+        function loadPhoto()
+        {
+            console.log(a);
+            if (a > photos.length) return;
+            for (let i = 0; i < 3; i++)
             {
-                var a = Math.floor(Math.random() * photos.length);
-                const pic = document.getElementById('photo' + (i+1).toString());
-                const picsrc = document.getElementById('photosrc' + (i+1).toString());
-                pic.href = photos[a];
-                picsrc.src = photos[a];
-                photos.splice(a, 1);
+                document.getElementById("gallery__column_1").innerHTML +=
+                "<a href=\"" + photos[a] + "\" target=\"_blank\" class=\"gallery__link\" id=\"photo" + a.toString() + "\">" +
+                    "<figure class=\"gallery__thumb\">" +
+                        "<img src=\"" + photos[a] + "\" alt=\"photo\" class=\"gallery__image\" id=\"photosrc" + a.toString() + "\">" +
+                    "</figure>"
+                "</a>";
+                a++;
+                
+                document.getElementById("gallery__column_2").innerHTML +=
+                "<a href=\"" + photos[a] + "\" target=\"_blank\" class=\"gallery__link\" id=\"photo" + a.toString() + "\">" +
+                    "<figure class=\"gallery__thumb\">" +
+                        "<img src=\"" + photos[a] + "\" alt=\"photo\" class=\"gallery__image\" id=\"photosrc" + a.toString() + "\">" +
+                    "</figure>"
+                "</a>";
+                a++;
+
+                document.getElementById("gallery__column_3").innerHTML +=
+                "<a href=\"" + photos[a] + "\" target=\"_blank\" class=\"gallery__link\" id=\"photo" + a.toString() + "\">" +
+                    "<figure class=\"gallery__thumb\">" +
+                        "<img src=\"" + photos[a] + "\" alt=\"photo\" class=\"gallery__image\" id=\"photosrc" + a.toString() + "\">" +
+                    "</figure>"
+                "</a>";
+                a++;
+
+                document.getElementById("gallery__column_4").innerHTML +=
+                "<a href=\"" + photos[a] + "\" target=\"_blank\" class=\"gallery__link\" id=\"photo" + a.toString() + "\">" +
+                    "<figure class=\"gallery__thumb\">" +
+                        "<img src=\"" + photos[a] + "\" alt=\"photo\" class=\"gallery__image\" id=\"photosrc" + a.toString() + "\">" +
+                    "</figure>"
+                "</a>";
+                a++;
             }
+        }
+
+        window.onload = function() {
+            loadPhoto();
         }
     </script>
 </body>
