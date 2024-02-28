@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNY 2024 - Photos</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-video-catalog.css">
+    <!--
+
+TemplateMo 552 Video Catalog
+
+https://templatemo.com/tm-552-video-catalog
+
+-->
+</head>
+
+<body style="background-color: #f8001a; position: relative;" >
+    <img src="img/header.png" alt="Header" style="max-width: 100%; position: fixed; z-index: -1;">
+    <button onclick="topFunction()" id="gotoTopBtn" title="Go to top">Go To Top</button>
+
+    <div class="tm-page-wrap mx-auto">
+        <div class="position-relative">
+            <div class="tm-site-header" id="site-header" style="position: fixed; top: 0px; transition: top 0.3s;">
+                <ul class="text-uppercase">
+                    <li class="active" style="display: inline-block;">
+                        <a class="nav-link tm-nav-link" href="index.html">Videos <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li style="display: inline-block;">
+                        <a class="nav-link tm-nav-link" href="#">Photos</a>
+                    </li>
+                </ul>
+                    </div>
+            </div>
+            <div class="tm-welcome-container tm-fixed-header tm-fixed-header-2">
+            </div>
+
+            <div id="tm-fixed-header-bg"></div> <!-- Header image -->
+        </div>
+
+        <!-- Page content -->
+        <main style="margin-top: -50px;">
+            <div class="container-fluid px-0">
+                <div class="mx-auto tm-content-container">
+                    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap"
+                        rel="stylesheet">
+
+                    <div class="gallery">
+                        <div class="gallery__column" id="gallery__column_1">
+                        </div>
+
+                        <div class="gallery__column" id="gallery__column_2">
+                        </div>
+
+                        <div class="gallery__column" id="gallery__column_3">
+                        </div>
+
+                        <div class="gallery__column" id="gallery__column_4">
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</main>
+        
+        <button class="button-63" role="button" onclick="loadPhoto()" id="loadmoreBtn">Show More!</button>
+
+        <footer style="margin-top: -50px;">
+            <img src="img/footer.png" alt="Image" style="max-height: 100%; max-width: 100%; z-index: 1; margin-top: -50px; ">
+                <p style="color: whitesmoke; position: absolute; bottom: 0; right: 10px;"> © Copyright Celestica Inc. 2024. All rights reserved. </p>
+        </footer>
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script>
+        $(document).ready(function () {
+$(this).scrollTop(450);
+        });
+
+            var photos = 
+                [
+                    "https://lh3.googleusercontent.com/pw/AP1GczMo23j21WH9fCSGViQfN1qAbHVpJLnS5_6faE3QHZDH1_42A9-uOL5siRvHxk8-MCbqSZ6eMQDeiSAH6lUD49zMWFwmP6j1yeD-m7zA-oKVYvXjXPhoDjEmXIe5uh2hBlyE5G2wcv0cDxq1EbzcqDJk=w1171-h879-s-no-gm?authuser=0", 
+"https://lh3.googleusercontent.com/pw/AP1GczNVzzR3xsnQJoH058a-XVefItHptTGEl_KwY7df1a2moNeuJBWmIxrhPNTos0afjbuPJGuczJmgXAsnP59LWBTUuW2CiDoAmFYuPoBxve7YAhpcGvAb00sxn1Eo1QR2voi5U5-lqIddBoR7UsHmCB9F=w1171-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczPB1v-FJN0u42A8u6eMCglCpOe-Yn4d7kTLaWpoA1uz_5TgveWipsYSWLV8vEoZsLXUsE9xSWeH8YvQbjEddr0sor4d6VwAG7dLp2MQpgzSI6eBkTOjPjiDf0YCSoU-dN0xI0zdQK_KXUsToK5zLpil=w1171-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczMjS7UJpaxixo6NXhBZjXDhVt1BBex3niYqI0Q4d6u2YrT0OoaE3BfJ5A5hWiBYVcgymzfqIGjf0eVt4U9cO_w9aCfOJ3GIIbPbhHZjALWu2q0WPDVi01OaqGgwUvOVH7z5u6yFoKXndru-fxpLfOZz=w1171-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNa5ctje6aOS_qnP0lMSzRE1GjhpjoBv5yIC2Pv4zTrTYZmJPBnv6ubySpKXBS2AqmNQffAuCp16hozYXknnsvt11xIeICiofTo9SzCZVHBEaQYjClFBL5b3t4o1GVCzVLGEj_sqxHofT1pchKyPltq=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOv9EZRgpv8iLGOf7tkMNASZfLQMDBFowhp2GXMAhOQD2rqXTbpc2UZAamOZ3mt5-d6BBVgau3Wikp8qPGqjsTFHa1AoR9DR0CTA75ExOFYeddxB9-hyJGrieP1u_g6EBEyx8mmuwhGYMwj28rilY3n=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczM1q6qJyAF4Dl4TCSu4TvLFWhRVXdM4rQsw2tV7YZSRT6_hoH_uNGfBvYx_STiTCZ7EFFy6ZPpEJfzIjGwK65pJb81JnoeZc_k3DIER9qLmpkdcprfkSo9zZ-W7LCmdfmuSDeBaEfi_jTTy4hmKehdb=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNd8Fr8Sl8NcaRRPMlyvii-_W1M_0vZKNm3mnmpDLO4lzUoPYi7vCC9LP7wENwl1yXWExvVXrKEOBkfSjKBG4cRxt2IrXQFk3fh0N02mggiXmZ5-55irMIl_mfwwAdG_rpql7nIxHcpF2C3y657XVo3=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOx3G6J7_OYjk6aRd0TssnVl-vc_QSw1JxZJ51vPupnWTuWoAAVDMZhd2PBKUwpxuwrbl2umh0UR2s_gaUs0GIHn5i5ZNt60Nw6igv1g5Gcifztk0hJe2qJlwCguyjE8_2fK0x-JLlpcBwKbKe7N-N4=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczP0STm7QYCHapdnLN_LdJpkH2NDJjlf6lRXzMZWoRslK460j-GjFhxHgnBkVTE008CdFqdN47rDRZEB6XzyZiQgoZ-vsN1u9iB5IHZFZ53utrDPovPgqpp4WjM2Kok5b1f1Ir_oqv6ptz5S_VFtPLmB=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczM0f74RxQHnBKzJrfrlZMxFuYartvamjSh0BJEY7eQKVYv-cnObx59AVHf3N4UmM9fOMD3qVIFRB_4aCGKYBv0cBhoTGCGQ2jIpwpl9OFW7dlGxI0Es3yiyKPFbNU_EzZ6b_kGUF2DUb4ZUR-rFq5aM=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczM1NVaQcjy-c3bMsJfAJen28WnOSqHLHaa6uswKy97nFaQdOAgqmvMByS_TMEShUbBdyC90qQZcKOhbzUB0OaLEAT4rPIBoTdDHMmLQIBPWWjtod6lxkx6mkeTwDB2TthjcTkSwhjEfmdPMiO6NZQly=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOe0icdQfCL4Fc0-ihNI_umuUl1m-y6yONq1GuJfqDw2D2UEM-YvsLIeZz7cXv3ge8h8QqqD0s_64kJiJHk7Vzbf5AT7EBt5KiMRTw87oi6p_RrKPqjekBKHc5zuNiP3nJOJVnybdf8XBGFBwuo_FPt=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczM9PyS04UDTp6Ofb6TKpP9eSi1vVLuCJ84AKge2x7CrdAaOtnm6dFFRNTwl37nWHOr3-awcldxOiPtSUpLyJQ7FrhlKcjU7GIErb1uhaK4KOvUnXfVTWOCEE8CKBk7fpQBWoPYTAL9GXNLDkg-bg2Fs=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczM4oIOqPU2yDXQTx-BGvbf7T1dAnWI4Sfs1BMqCPfxOfgIV5Q2t8S1DHL1n4VYgrrAv3AIi64YGhGuIyzRIk6rUL2GvZBgJ6Mbi71mokzWk_3bUX0f-jp_j9IEof7i8_y7-2k-vfQRWRtcNmxv_jHBQ=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNKHieeqYTnkCV0CrQPfZHpyNv45APRBYI1_BWw_SOBeI3OMSBk7P8XApM7F0ugveuMxvqZ3xQ6kEx3uLJqC2SioBiDCNOXyYLv7x8H3PnLWGN7uZyRZNHD4XOrUBVkpjToZAiTmiR0eMPN_pmBP-cw=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNp7DV4Dw9ozQthhkI8pFKTZMwJ6TiJXIblxgspJGOcjuMPUwSDPK92NQwVaDez8mCNpMfBW3W5PLKDh3HI42d4JXplspY7kzTz8bUaW8ui9K_DArKjkU7YQz8_9DuUnI8z609JNu9KNTK58Evieq7s=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNHFec2mNzYgnFegT1GtglFexNk7ggQ8LdhLj3QgQ1HTeAy9iIVwaup7QyAubVNNXeMtFctxEMYYCD3-0BWlEDQzjQ7w-Ym_GJZKpdDIgdqz-S70PRZWkxT8Tv_IzGL-J9FhM2HjdPOZ8TnoglULGW-=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczN4h1PGB64wRL9gl-CAHaDXmtv5a8-uQyOf_afTReVrcWaVMgUDeqTasmQ7BL5EuKs-Pnogl4AMQAxT-JTBXXVnLqpyus6jUDR9W4HpNQAzGZIYxIHXU2ITWXC3_QgTGGnzv27Du1GInj15DYfz8Ty-=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNa9hQZTx1SHWO7WkCVwmCBMIYK0US4p4Uwel8SnayC_DHbXSRSukDxyHGrj2HsUudPld5Ps2Iopagp_nIsJKh9k4ieY5tdCReUjk-DVvxLG6w6AjRMHlep41DDim3KHmdGmYTB7KWSXt-bzd6Corug=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNcIhkQq11G9gy8SP8mmBFTCYgR3UNQf_UwrmpZLskGhLS81HIqFV6qDRMAOdfxRQE2TZReGpHGgr83A5pqBpS9FqyRtlm3aV4Z0SG1fIqOnU57WNjux5xd8BjG09ZSvG7RM-7YLP2XG0sQSFJdBBRz=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczMmjG3RsO9kqdNGwJtCCt336uKKKsYLtqA-NMOqIckwQxaBJC7BGgACBhL5M_XJkQqoYewe-kT29SsykT1oAIP5NKmM_ePxlXPrTzlT15ZZDJb4mDAvKDWEzneSzT8rQnTT2Elb_dWunmkq9u1wdBW9=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOI_hApm21f08XP88ZOJ8es-mjJncnDsIm1-QYL61xMVXmKUZ2otz85hr3BahrUtYB6YFAdNoMGfLkNMJ6PKOW4IuBvqkXxsdZY35LAiv9yHO8hbJ5oZyUhTmreZrvQNfw5LalMkfws3eMKtP6CxMVl=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczPvWGNvr06_ziDEui2bu8KSWd01dQSfrpPNbBDVkimLdfGv0z2wj2dOgqn0wx3KNi2Z7B4PKJ1AY92_Ib4S3CEhgL_AsDh5aCzQO0a9dhtuXHLayQiAuf6d4juGjrtwqjX6P67IR1D69Nz3x5dSXLBH=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNAllqoXrzgAxQVavj7cv-F4NP2mI5BDmdTnM1mMiJahArlVHpCl49JYmexIjyE2qjsrhMUr_Df-1YMHcat9nE4YE0NOL1hl9AhKpGdhn4T3vgrcpIb8jA-SI4eMAiP45LloCLyyFMDdHY0l2VkBxUR=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOgLqjIF8gdDLMqoGcMAwQpo_6DJuGOVhJgU9HlUIEc1NC7To1iU056KEqXKSQZA8Bzbv54qKlpSGQv_xe74voVBzNaPN4SsdvaiEKcUihbKT2csB1VFOadYfXSnEObndrZ7vhVvuHuuKNIanf9kMVf=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOghuHgripuFwMzztytJUcCjK1ABx_5mPhJiFR1eBua5H--VTKPLm4954bRvO92xKt4JeUqGT9wsFIaUpzTIKM1h861hBC-jNGYBHrZSVHgi_JZ3crIgUg9V-11SQ7GgIRhuY35Jzt6QuMObITkE973=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNreC9BB2lOd4WNF8w9FxRdcHfKCOCVMLL1r9lHQVbvzzv3SkjMxWhuQzu7LZjfpPEeQvW7Fz_92ajvhCdDHUtxAQHtnf4GuuFaRpIV8bB2g3ZLf5-Q49O6Y2bHc-xG1n317sJSP3k7SpRrjfHD00Gi=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOzmdQTs2pNFcfbZRWbmisg85hTne1sVRSgxFq9roLRlQ_ZxskMGTwqOgZF_MifYyjBrT228BPc2Z_QEYUGp7gvV58EA4z0aLn6H50UT6O1_l2Y4OnkSXI18UZAWL5OaqkB54uZ2JCka24_LhY9L5yQ=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczMCuNS9KQFuTzGhoUcT52JQc6KOAOy2GnHSA8B8PqjaP2Hnyoy8_ny_MhVVPfs6hHL1gzXIhvU_wtJ2HzJCILm09ErCUVziLpGcfE1Nvzb4mBAFny3B5Zpk7RW1XR2oYWLEO7bIW5UO6UvPQUi5eCYA=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNtdb1rEwOpkGxXJVRVQ0zZ9p951_mbtXogyIyOcZBL-tXd-HUsmQkrzgkq7TEeXzkIOb6uwfV7AaIuH_s6MckYZY33nhbNb7U_zCcetb8L2pa2ZS3p1kkW7rSIAZzt9yPWh_FE3XjDkR-eXoFNLVKr=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczPwSVr16WGjHXt2ogUsCrM6gxCBepYMKuQ8gUoYMaQC3mji7Ryxp0KyjL6BeO02tvAaWH5GZ7n_foRHkOpGhJBnqCzgbNuJqfsHD9ivn3v0bC6OoFba1c3s0Aw36eEBwCsr-gC2lG3zJkIqZGX5Ecmh=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOOESQxwqSCNYTEgFhMJ00jlvoD6VbtxHNw3AY5XvDGxvzhNBctsUJYlmyVQ7gsjLNikVgbAxpXa3ZyLjl4QDZzk-EafpEtJJNwBIMk8X32T_T6Bd6OluffTxAiIFqep6Dgq8LObNbLTMb6_aSP_6sv=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczN805w31g25WXxxH1nnqywX6RtDTfBMVj3YhtAE5faRarHITYqkKGYYVroDwvVGnRJR2lS5KumwKmyaR8OdaFMNTHPyFRD-6qoQHw6iwbzbJunWXbq2NTfWh0zNBUAnUeBKeUQW6f6j2nugsM-yejO5=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOPulVjT_YMrIXYXxZrRUgY0PkY98Jrqmp7Qe2sW5wKLkMoJ-GZ5byItL1IQB3RTsABwA_gvOHLUaDAC5xpyP76nb3cfo4TNzfgU3h7yLIlGFGgnL0Ld9DMZpy9cibd8rB1WON4L6zrGCC89FwdhJVO=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczMgfDJCLULJscq-sHmJSFwENpz5uzgkDYkOvVV1WUYcdsaOfO2B-hXN7YDSpnZo2j8pnHjgcfzB1kvMzwGBn4h7drLdzUOP0v_q5T2YzEFQy4IhKcf9RDbsn6a_T2s1UFf-uGjIMe4agXSok4kthaJx=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOSEViTDuVdjGdn2AVK9mAzxrlKsOCv-go5UdbIlj0I2AKrqAkLC-qPQwkGXeMKQeVJhfwYurFZFl1IbORIiAxAEtcJWgwS8HIrrV4vqNlao1UAcVukVC1g0_hiDyujoA3BijVAA3pOBRimoiiOdYch=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczP7QPiigTqFLG0IL4gp7Aojt81a4LrL0Yrx6x8XztJnpL7FFkA7OkIp3-Hjs0fdJP4tNP6iuTd7flGsIhC1Chz6F40mmIzjbaARWb8vIAGfMuG5N-UwbTyqnWLzwV-fm3uqzuOBqk9iJ3c0bgxQG67n=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczPBaXy4RGKFqdLbtggSn4xmE9qPubXPRCtBU1x4fTXXKcNmQzuxS_dtHAjrHARkkEF8GruWF70T9xKTdyogBraJ1QsdLVvgpvxkhKaId1Vb83qpayyOmcGqOoz8ZZ1SlYqZyZ-lftQUDVEoUfpmDWQ9=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOCtPFs8zU4AKVX-WTyDHrA7UWz-O4bdNcRHEB9-6BrFBbEA-IwRiz37CdNryOWU8mNH2uqEJsKlJ48JN4ziwbF36DQDEAsi2SznV0Y4D2rkhcM1004p8PyLoObORC4UgpohqsrEC9BjuEbPTucQtQ6=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOx9Rs1xlefcxpjlcNIRPP4twUVNnPm4hkoQkoPsoPa-DrSgxlYQy8mIGK_A6Ag_PnLjqo0zUkc_y50bC16FNScftzhhPYkC_Oz0EWqXjMYxv3KB4-pH-f3sUNy4YFISVQpGChqm7fvpm8w5BTxMS-I=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNcP-a_qjsKiNJDpRAnCTVrmBWp8GhuM3xpoPJFJ9QwOdwtUKt_3d8eYbqSPeoXkgeLF9rP75vHsyy-cjeCFLZH1FusdYXLu0-cfil9iFTIdoK9BLSEQnnC2TlMU0fqQRuSR3quj-Rb9S5mCnNOrfz_=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczMwva9qW7sckrawE5jDRj1kLgOtBga1GLUU7pZLncKyJ2pEYE88wgE35gKW1S1FHbkth22eXzBC9AMdK0vjuG6mdqSqlV79hb8u1bveNcDICLCqwXU80rQ98mHJG9igX5RU0cGoxZy1YsZnHeiPvf_5=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOABFhmbY6XWo5deFAJP4O9r7fsvjLFkRck8dVDPtA7QdJxMUsWMi1MGAgNkJ_EenCPToL-2fCZMPy2JTDM-FEzXszaJYeK-VCMhL-oJK98rAfywc3b_GzTX6UGIY45fDhyU0qYXyw53LyGyoAz14dg=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczMQAfJ1RsvGE2QYTnTAvhaYHKf8PMnQkmpllODj9PatqLEzSz03RNJD5w1rDHTmA137xLu9eJXpYfX4HP3oIRvatkjHY7DOoXZnycyXUrpuTTeDek6HnbLmG0LrdR70VDy7p7E8nxykU-elJdM9J4Z5=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOJgKfSJccNPOxE1ZB7l4Giz5hyNCDYP6WmYBkidrS9eQjPI2ratFGmoER7zGuKtzVd-Wc7eOSDKm4n3BOkL9LV63zpI2f1OhqODXiUPmvU7tO8jFJlvI1nu3HCwJVf9ga0z6IN-vDIyvDewUa_ltjq=w659-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOEGits5wPpAhzsVpAXC0nxeEuH2YWhWgUn27xRodfX5XN5vnnZ4VBZitswZ33mRnc_ef-pkzDQrOhEfKEdWLK-VZYy8cyJxQNaB6Aq4yxpfIJ2HwkCqZ7GUJHuFCB2YnpYumY43CCdyw56QTU7gl-b=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczO0rDknJ4wzuJUzEBwURWFMCGc6n0e51Dg23d2DMkPJjgfAkNZdb-7gczpyJPUtR40DQzeob98j7q62L1F2XVrh3LSPyvClJgAYYVLwp_Hvxzf-Lq7-m1oS1J3r_gLO-wPPWF8E1L4PErj8rfUev9-A=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNVZBBqLuuwWgmF80AGQlUhGL-2QsWL5eVbLD-n5pSKSMMDZX1BhZhYRzvEM6dLlJCmIyd6ek5hMAH9KFgvFtTOhtienVvX95JTGrWhHeaEoQ4e8fAMewJQkG3_gA7x7rBPDN39TlKSAGou7uu4TA7a=w1920-h864-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOlB_behg84Brrc-xUkEDgfs3cFeOWMomPHHTWCnsLn6NI89ORsLVm0QhCobJC7orkTmBBT9CZUA7or6oA5Wq0Zu8R-aGT4nAuuMftZelDCJ_LatDEYuS12mqRe-Zl8l4GehVMN48d6JF4qcSFi9Fdh=w1168-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczOr9BUx6NAhuiBrFhwV0St01m8XLSeh0yUiKIuN0_E3vB36M3-7iQ-JulXLXp9dxit1FLLZvRrTrljDFnjTGCkx6lJw3w7_bFBZd3Y0av085zvWy3jWqopUMjbI2s8CH403Dr31G3W_bt6ymHIZUg-R=w1563-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNIh_L8SyPiSTQPqamLwVxaQ0bnB9lYPeTJrWeaa2jsG3Z4gTiFUc4uKXZuR_Wttcc7jVcYbdT_q46QIz4isa9-Nx5hGsSgHqBinaoC9YPbIXcBbdbfNpm64lLGUAP9yU8WWXHT3MudtxxMURU5_nM6=w1563-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczN54CN0q06Jf9JLAhFpq97UN5q9Hk6VE-0ergs4fCeuCT81AvXagUmCqjgd4f87cIGACKGyXoMQhjEzatb34hjcN9mgiAmtxU-tXS4YH6bbqdlr8-n7UgyUUqrATPY4mQokvo9HpIsiy_vS8IgNriLM=w1559-h879-s-no-gm?authuser=0",
+"https://lh3.googleusercontent.com/pw/AP1GczNvmAzgbqcgNnr9rgv_RGvkOGAWqjdrXVW5XXEXH3mYvwN9xdYmXMPXNcYoBW_zA-W3wuxNUjc56g6iQLaAQ98IWPxL4nb7rPmJlS04fvjhhPT9NVtZV5Viwf99ntrdlz-ZcCLGmDst3Jv9FwA_ZL5E=w1563-h879-s-no-gm?authuser=0"
+                ];
+
+        function loadPhoto()
+        {
+            for (let i = 0; i < 3; i++)
+            {
+                if (photos.length < 4) 
+                {
+                    document.getElementById("loadmoreBtn").innerHTML = "All Photos Loaded";
+                    return;
+                }
+                document.getElementById("gallery__column_1").innerHTML +=
+                "<a href=\"" + photos[0] + "\" target=\"_blank\" class=\"gallery__link\">" +
+                    "<figure class=\"gallery__thumb\">" +
+                        "<img src=\"" + photos[0] + "\" alt=\"photo\" class=\"gallery__image\">" +
+                    "</figure>"
+                "</a>";
+                photos.splice(0, 1);
+                
+                document.getElementById("gallery__column_2").innerHTML +=
+                "<a href=\"" + photos[0] + "\" target=\"_blank\" class=\"gallery__link\">" +
+                    "<figure class=\"gallery__thumb\">" +
+                        "<img src=\"" + photos[0] + "\" alt=\"photo\" class=\"gallery__image\">" +
+                    "</figure>"
+                "</a>";
+                photos.splice(0, 1);
+
+                document.getElementById("gallery__column_3").innerHTML +=
+                "<a href=\"" + photos[0] + "\" target=\"_blank\" class=\"gallery__link\">" +
+                    "<figure class=\"gallery__thumb\">" +
+                        "<img src=\"" + photos[0] + "\" alt=\"photo\" class=\"gallery__image\">" +
+                    "</figure>"
+                "</a>";
+                photos.splice(0, 1);
+
+                document.getElementById("gallery__column_4").innerHTML +=
+                "<a href=\"" + photos[0] + "\" target=\"_blank\" class=\"gallery__link\">" +
+                    "<figure class=\"gallery__thumb\">" +
+                        "<img src=\"" + photos[0] + "\" alt=\"photo\" class=\"gallery__image\">" +
+                    "</figure>"
+                "</a>";
+                photos.splice(0, 1);
+            }
+        }
+
+        window.onload = function() {
+            shuffle(photos);
+            loadPhoto();
+        }
+
+        function shuffle(array) {
+            let currentIndex = array.length,  randomIndex;
+
+            // While there remain elements to shuffle.
+            while (currentIndex != 0) {
+
+                // Pick a remaining element.
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+
+                // And swap it with the current element.
+                [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+            }
+
+            return array;
+        }
+
+        // Get the button
+        let mybutton = document.getElementById("gotoTopBtn");
+
+        // When the user scrolls down 800px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script>
+        let prevScrollPos = window.pageYOffset;
+
+        window.addEventListener('scroll', function () {
+            // current scroll position
+            const currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                // user has scrolled up
+                document.getElementById("site-header").style.top = "0";
+            } else {
+                // user has scrolled down
+                document.getElementById("site-header").style.top = "-100px";
+            }
+
+            // update previous scroll position
+            prevScrollPos = currentScrollPos;
+        });
+    </script>
+</body>
+</html>
