@@ -275,6 +275,7 @@ p {
     display: flex;
     flex-direction: column;
     margin-bottom: 64px;
+    border-radius: 20px;
 }
 
 .tm-thumbnail-container {
