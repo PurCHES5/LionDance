@@ -271,7 +271,7 @@ p {
 }
 
 .tm-catalog-item {
-    max-width: 462px;
+    width: 60%;
     display: flex;
     flex-direction: column;
     margin-bottom: 64px;
